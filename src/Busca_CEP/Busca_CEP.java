@@ -152,7 +152,17 @@ public class Busca_CEP {
             */    
             try {
 
-                LeitorHTML = new BufferedReader(new InputStreamReader(Url_Para_Pesquisar.openStream()));
+                /*
+                    ATENÇÃO!!!
+                
+                    Você precisa sinalizar o Charset da Página que você está
+                    lendo para UTF-8 se não você vai ter um monte de problema
+                    referente a acentuação. Por que ele por padrão vai adotar
+                    o ISO8859-1 e o Java trabalha com o UTF-8 se você não 
+                    falar pro InputStreamReader receber em UTF-8 vai dar pal
+                    em toda a acentuação
+                */
+                LeitorHTML = new BufferedReader(new InputStreamReader(Url_Para_Pesquisar.openStream(), "UTF-8")); 
                 
                 //Instanciando String para ler cada Linha.
                 String Linha = ""; //Inicializando Váriavel
