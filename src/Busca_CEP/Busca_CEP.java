@@ -177,7 +177,11 @@ public class Busca_CEP {
                     
                 }
                 
-                //Página Web Obtida com sucesso triando resultados.               
+                /*
+                    Página Web Obtida com sucesso fechando BufferedReader e
+                    iniciando processo de triagem de resultados após o Try|Cath. 
+                */
+                LeitorHTML.close();
                 
             } catch (IOException ex) {
                 
