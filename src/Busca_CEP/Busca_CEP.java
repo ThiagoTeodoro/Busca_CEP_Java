@@ -68,6 +68,16 @@ public class Busca_CEP {
                                   //separador "-"
         
         //Inicializando Variáveis {Boa prática}
+        /*
+            O bom de Inicializar as variáveis assim, é que caso dê erro e os
+            atributos não sejam setados pelo método Buscar_CEP() quando o JFrame
+            tentar acessar os atributos eles estarão setados com vazio e não 
+            nulos o que vai minimizar erros com relação a NullPointer, 
+            Minimizando as  dores de cabeça em caso de erros ao encontrar o 
+            CEP ou erros da Classe. Se der erro o máximo que vai acontecer é
+            os campos ficarem com a setagem de inicialização que é vazia 
+            ou seja não dá erro mais também não dá nada no JFrame =).
+        */
         this.Cidade = "";
         this.RUA = "";
         this.Tag_Abertura = "";
